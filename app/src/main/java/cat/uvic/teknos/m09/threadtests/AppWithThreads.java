@@ -15,13 +15,17 @@ public class AppWithThreads {
         var importantStuff2 = new ImportantStuff2();
         var importantStuff3 = new ImportantStuff3();
 
-        importantStuff1.start();
-        importantStuff2.start();
-        importantStuff3.start();
+        var thread1 = new Thread(importantStuff1);
+        var thread2 = new Thread(importantStuff2);
+        var thread3 = new Thread(importantStuff3);
 
-        importantStuff1.join();
-        importantStuff2.join();
-        importantStuff3.join();
+        thread1.start();
+        thread2.start();
+        thread3.start();
+
+        thread1.join();
+        thread2.join();
+        thread3.join();
 
         System.out.println("The end");
     }

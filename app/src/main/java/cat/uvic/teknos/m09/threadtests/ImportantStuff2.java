@@ -1,6 +1,6 @@
 package cat.uvic.teknos.m09.threadtests;
 
-public class ImportantStuff2 extends  Thread{
+public class ImportantStuff2 implements Runnable{
     @Override
     public void run() {
         try {
