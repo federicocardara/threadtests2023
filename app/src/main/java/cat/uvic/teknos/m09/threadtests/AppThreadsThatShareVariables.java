@@ -26,7 +26,6 @@ public class AppThreadsThatShareVariables {
 
 
     private static void increment() {
-
             System.out.println(Thread.currentThread().getName() + " starts working");
 
             for (var i = 0; i < 10000; i++) {
