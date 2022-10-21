@@ -23,6 +23,7 @@ public class ProducerConsumerTest {
                     var nextInt = random.nextInt(0, 1000);
                     numbers.add(nextInt);
                     System.out.println("Added " + random.nextInt(0, 1000));
+                    notify();
                 } else {
                     System.out.println("numbers already has 5 elements");
                     try {
@@ -31,7 +32,7 @@ public class ProducerConsumerTest {
                         throw new RuntimeException(e);
                     }
                 }
-                notify();
+                System.out.println("Exiting synchronization");
             }
         }
 
